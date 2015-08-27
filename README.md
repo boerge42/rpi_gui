@@ -1,4 +1,4 @@
-# rpi_gui --> Benutzeroberflaeche fuer meinen Rasberry PI...
+# rpi_gui; eine Benutzeroberflaeche fuer meinen Rasberry PI...
 
 ## Autor:
 Uwe Berger; bergeruw(at)gmx(dot)net; 2014, 2015 
@@ -19,12 +19,12 @@ siehe Projektseite...
   * ... ;-)
 
 * Download rpi_gui-Quellen
-'''
+```
 make 
 sudo make install
 sudo cp rpi_gui.conf /etc/rpi_gui.conf
 cp jpeg/*.* /wohin_auch_immer/
-'''
+```
 
 * Einrichten Generierung Wettervorhersagedatei (Bsp. weather_forecast.conf)
   z.B. Konvertierungsscript zyklisch ueber Cronjob... 
@@ -33,9 +33,9 @@ cp jpeg/*.* /wohin_auch_immer/
   z.B. Konvertierungsscript zyklisch ueber Cronjob... 
   (Bsp. script/weather_current.tcl)
 * Konfigurationsdatei /etc/rpi_gui.conf entsprechend anpassen
-'''
+```
 sudo rpi_gui
-'''
+```
 
 ## Funktionalität (u.a):
 * Anzeige/Bedienung ueber Touch-Display
@@ -48,10 +48,10 @@ sudo rpi_gui
 * Anzeige diverser Infos zur laufenden mp3-Datei
 * ein paar Systeminformationen zum Raspberry
 
-[![Screen-Music](https://github.com/boerge42/rpi_gui/screen/rpi_gui_music.jpg)]
-[![Screen-Queue](https://github.com/boerge42/rpi_gui/screen/rpi_gui_queue.jpg)]
-[![Screen-Wetter](https://github.com/boerge42/rpi_gui/screen/rpi_gui_wetter.jpg)]
-[![Screen-System](https://github.com/boerge42/rpi_gui/screen/rpi_gui_system.jpg)]
+[![Screen-Music](https://github.com/boerge42/rpi_gui/screens/rpi_gui_music.jpg)]
+[![Screen-Queue](https://github.com/boerge42/rpi_gui/screens/rpi_gui_queue.jpg)]
+[![Screen-Wetter](https://github.com/boerge42/rpi_gui/screens/rpi_gui_wetter.jpg)]
+[![Screen-System](https://github.com/boerge42/rpi_gui/screens/rpi_gui_system.jpg)]
 
 
 ---------
