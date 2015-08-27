@@ -38,7 +38,7 @@ cp jpeg/*.* /wohin_auch_immer/
 sudo rpi_gui
 ```
 
-## Funktionalität (u.a):
+## Funktionalität:
 * Anzeige/Bedienung ueber Touch-Display
 * Anzeige der aktuellen Werte aus meiner Wetter-Datenbank (ueber eine
   Dateischnittstelle; siehe oben)
@@ -49,10 +49,10 @@ sudo rpi_gui
 * Anzeige diverser Infos zur laufenden mp3-Datei
 * ein paar Systeminformationen zum Raspberry
 
-[![Screen-Music](https://github.com/boerge42/rpi_gui/screens/rpi_gui_music.jpg)]
-[![Screen-Queue](https://github.com/boerge42/rpi_gui/screens/rpi_gui_queue.jpg)]
-[![Screen-Wetter](https://github.com/boerge42/rpi_gui/screens/rpi_gui_wetter.jpg)]
-[![Screen-System](https://github.com/boerge42/rpi_gui/screens/rpi_gui_system.jpg)]
+[![Screen-Music](https://github.com/boerge42/rpi_gui/blob/master/screens/rpi_gui_music.jpg)]
+[![Screen-Queue](https://github.com/boerge42/rpi_gui/blob/master/screens/rpi_gui_queue.jpg)]
+[![Screen-Wetter](https://github.com/boerge42/rpi_gui/blob/master/screens/rpi_gui_wetter.jpg)]
+[![Screen-System](https://github.com/boerge42/rpi_gui/blob/master/screens/rpi_gui_system.jpg)]
 
 
 ---------
