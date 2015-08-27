@@ -41,7 +41,7 @@ cp jpeg/*.* /wohin_auch_immer/
 sudo rpi_gui
 ```
 
-## Funktionalität:
+## Funktionalitaet:
 * Anzeige/Bedienung ueber Touch-Display
 * Anzeige der aktuellen Werte aus meiner Wetter-Datenbank (ueber eine
   Dateischnittstelle; siehe oben)
