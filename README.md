@@ -1,5 +1,5 @@
 # RPI-GUI
-...eine Benutzeroberfläche fuer meinen Rasberry PI...
+...eine Benutzeroberfläche für meinen Rasberry PI...
 
 ## Autor:
 Uwe Berger; bergeruw(at)gmx(dot)net; 2014, 2015 
