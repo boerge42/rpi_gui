@@ -43,8 +43,8 @@ sudo rpi_gui
 ```
 
 ## Funktionalität:
-* Anzeige/Bedienung ueber Touch-Display
-* Anzeige der aktuellen Werte aus meiner Wetter-Datenbank (ueber eine
+* Anzeige/Bedienung über Touch-Display
+* Anzeige der aktuellen Werte aus meiner Wetter-Datenbank (über eine
   Dateischnittstelle; siehe oben)
   http://www.bralug.de/wiki/Wetterdaten_mit_Linux_aufzeichnen_und_verarbeiten
 * Wettervorhersage
