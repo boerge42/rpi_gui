@@ -24,6 +24,7 @@ git clone git://github.com/boerge42/rpi_gui.git
 ```
 * Übersetzung und Installation:
 ```
+cd rpi_gui
 make 
 sudo make install
 sudo cp rpi_gui.conf /etc/rpi_gui.conf
