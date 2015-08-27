@@ -1,5 +1,5 @@
 # RPI-GUI
-...eine Benutzeroberflaeche fuer meinen Rasberry PI...
+...eine Benutzeroberfläche fuer meinen Rasberry PI...
 
 ## Autor:
 Uwe Berger; bergeruw(at)gmx(dot)net; 2014, 2015 
@@ -41,7 +41,7 @@ cp jpeg/*.* /wohin_auch_immer/
 sudo rpi_gui
 ```
 
-## Funktionalitaet:
+## Funktionalität:
 * Anzeige/Bedienung ueber Touch-Display
 * Anzeige der aktuellen Werte aus meiner Wetter-Datenbank (ueber eine
   Dateischnittstelle; siehe oben)
