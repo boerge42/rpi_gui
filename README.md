@@ -18,8 +18,11 @@ siehe Projektseite...
   * libconfig
   * libjpeg
   * ... ;-)
-
-* Download rpi_gui-Quellen, Übersetzung und Installation:
+* Download rpi_gui-Quellen:
+```
+git clone git://github.com/boerge42/rpi_gui.git
+```
+* Übersetzung und Installation:
 ```
 make 
 sudo make install
