@@ -49,10 +49,10 @@ sudo rpi_gui
 * Anzeige diverser Infos zur laufenden mp3-Datei
 * ein paar Systeminformationen zum Raspberry
 
-[![Screen-Music](https://github.com/boerge42/rpi_gui/blob/master/screens/rpi_gui_music.jpg)]
-[![Screen-Queue](https://github.com/boerge42/rpi_gui/blob/master/screens/rpi_gui_queue.jpg)]
-[![Screen-Wetter](https://github.com/boerge42/rpi_gui/blob/master/screens/rpi_gui_wetter.jpg)]
-[![Screen-System](https://github.com/boerge42/rpi_gui/blob/master/screens/rpi_gui_system.jpg)]
+[![Screen-Music](https://github.com/boerge42/rpi_gui/blob/master/screens/rpi_gui_music.png)]
+[![Screen-Queue](https://github.com/boerge42/rpi_gui/blob/master/screens/rpi_gui_queue.png)]
+[![Screen-Wetter](https://github.com/boerge42/rpi_gui/blob/master/screens/rpi_gui_wetter.png)]
+[![Screen-System](https://github.com/boerge42/rpi_gui/blob/master/screens/rpi_gui_system.png)]
 
 
 ---------
