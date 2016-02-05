@@ -1,0 +1,16 @@
+Tcl-Scripte zur Ermittlung der aktuellen Wettermesswerte
+========================================================
+                (Uwe Berger; 2015)
+                
+Das Programm rpi_gui stellt verschiedene aktuelle Wetterwerte (Tempera-
+turen, Luftdruck, Luftfeuchtigkeiten) dar. Wie diese Werte ermittelt
+werden, ist jedem selbst ueberlassen :-)! Uebergabedatei ist eine Datei
+im libconf-Format.
+
+Im vorliegenden Fall (weather_current.tcl) werden die Werte aus einer 
+SQLite-Datenbank ermittelt. Ich gehen mal davon aus, dass Tcl kein 
+Fremdwort ist!
+
+
+---------
+Have fun!

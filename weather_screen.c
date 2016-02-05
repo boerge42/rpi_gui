@@ -41,9 +41,10 @@ typedef struct {
 	char temp_high[10];
 	char text[100];
 	char code[10];
+	char image[15];
 } weather_forecast_t;
 
-static weather_forecast_t weather_forecast[4];
+static weather_forecast_t weather_forecast[5];
 
 static char weather_forecast_current_date[40];
 
@@ -59,7 +60,7 @@ int  get_forecast_idx(void)
 // ********************************************
 void incr_forecast_idx(void)
 {
-	if (forecast_idx < 3) {
+	if (forecast_idx < 4) {
 		forecast_idx++;
 		refresh_weather_screen();
 	}
@@ -110,12 +111,15 @@ void weather_db_output(void)
 	// Bild nur, wenn neu...
 	if (strcmp(old_code, weather_forecast[forecast_idx].code)) {
 		path_normalize(cfg_weather_forecast_pics, cfg_weather_forecast_pics);
-		sprintf(s, "%s%s.jpg", 
+//		sprintf(s, "%s%s.jpg", 
+//					cfg_weather_forecast_pics,
+//					weather_forecast[forecast_idx].code);
+		sprintf(s, "%s%s", 
 					cfg_weather_forecast_pics,
-					weather_forecast[forecast_idx].code);
-		jpeg_output(s, 10, y, 52, 52);
+					weather_forecast[forecast_idx].image);
+		jpeg_output(s, 10, y, 50, 50);
 		strcpy(old_code, weather_forecast[forecast_idx].code);
-	}
+		}
 	sprintf(s, "%s, %s", 
 				weather_forecast[forecast_idx].day,
 				weather_forecast[forecast_idx].date);
@@ -178,13 +182,14 @@ int weather_forecast_read(void)
 	int	i;
 
 	// "Defaultwerte" setzen
-	for (i=0; i<4; i++) {
+	for (i=0; i<5; i++) {
 		strncpy(weather_forecast[i].day, "-", sizeof(weather_forecast[i].day));
 		strncpy(weather_forecast[i].date, "-", sizeof(weather_forecast[i].date));
 		strncpy(weather_forecast[i].temp_low, "-", sizeof(weather_forecast[i].temp_low));
 		strncpy(weather_forecast[i].temp_high, "-", sizeof(weather_forecast[i].temp_high));
 		strncpy(weather_forecast[i].text, "-", sizeof(weather_forecast[i].text));
 		strncpy(weather_forecast[i].code, "-", sizeof(weather_forecast[i].code));
+		strncpy(weather_forecast[i].image, "-", sizeof(weather_forecast[i].image));
 	}
 	strncpy(weather_forecast_current_date, "-", sizeof(weather_forecast_current_date));
 	// conf-Datei mit Vorhersagewerten oeffnen...
@@ -194,7 +199,7 @@ int weather_forecast_read(void)
 		return 1;
 	}
 	// ...und auslesen
-	for (i=0; i<4; i++) {
+	for (i=0; i<5; i++) {
 		sprintf(cfg_str, "forecast%i_day", i);
 		if (config_lookup_string(&cfg, cfg_str, &str))
 			strncpy(weather_forecast[i].day, str, sizeof(weather_forecast[i].day));
@@ -203,11 +208,11 @@ int weather_forecast_read(void)
 			strncpy(weather_forecast[i].date, str, sizeof(weather_forecast[i].date));
 		sprintf(cfg_str, "forecast%i_temp_low", i);
 		if (config_lookup_string(&cfg, cfg_str, &str)) {
-			strncpy(weather_forecast[i].temp_low, str, strlen(str)-4);
+			strncpy(weather_forecast[i].temp_low, str, strlen(str));
 		}
 		sprintf(cfg_str, "forecast%i_temp_high", i);
 		if (config_lookup_string(&cfg, cfg_str, &str)) {
-			strncpy(weather_forecast[i].temp_high, str, strlen(str)-4);
+			strncpy(weather_forecast[i].temp_high, str, strlen(str));
 		}
 		sprintf(cfg_str, "forecast%i_text", i);
 		if (config_lookup_string(&cfg, cfg_str, &str))
@@ -215,6 +220,9 @@ int weather_forecast_read(void)
 		sprintf(cfg_str, "forecast%i_code", i);
 		if (config_lookup_string(&cfg, cfg_str, &str))
 			strncpy(weather_forecast[i].code, str, sizeof(weather_forecast[i].code));
+		sprintf(cfg_str, "forecast%i_image", i);
+		if (config_lookup_string(&cfg, cfg_str, &str))
+			strncpy(weather_forecast[i].image, str, sizeof(weather_forecast[i].image));
 	}
 	if (config_lookup_string(&cfg, "current_date", &str))
 		strncpy(weather_forecast_current_date, str, sizeof(weather_forecast_current_date));

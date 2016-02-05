@@ -163,7 +163,7 @@ int open_framebuffer(int *xres, int *yres)
 	memcpy(&orig_var, &var, sizeof(struct fb_var_screeninfo));
 
 #if DEBUG
-	printf("Framebuffer %s resolution;\n", fbdevice);
+//	printf("Framebuffer %s resolution;\n", fbdevice);
   	printf("%dx%d, %d bpp\n\n\n", var.xres, var.yres, var.bits_per_pixel );
 #endif
 

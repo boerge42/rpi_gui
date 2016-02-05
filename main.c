@@ -126,7 +126,7 @@ static button_t buttons[NR_BUTTONS] = {
 {213, 190, 101, 20, "Shutdown",WHITE, GREEN, WHITE,  FONT_8X16, WHITE, YELLOW, BLUE, WHITE, RED, YELLOW, 0},
 // Screen "Queue"
 {  5, 155, 308, 20, "MPD-DB update...", WHITE, GREEN, WHITE,  FONT_8X16, WHITE, YELLOW, BLUE, WHITE, RED, YELLOW, 0},
-// Screen "Weather (Forecast)"
+// Screen "Weather (Forecast)" y=155
 {  211, 135, 51, 20, "Prev", WHITE, GREEN, WHITE,  FONT_8X16, WHITE, YELLOW, BLUE, WHITE, RED, YELLOW, 0},
 {  265, 135, 51, 20, "Next", WHITE, GREEN, WHITE,  FONT_8X16, WHITE, YELLOW, BLUE, WHITE, RED, YELLOW, 0}
 };
@@ -684,7 +684,7 @@ void refresh_screen(void)
 				draw_new_cd_cover = 1;
 				BUTTON_SWITCH_ON(BUTTON_WEATHER);
 				if (get_forecast_idx() > 0) BUTTON_IS_VISIBLE(BUTTON_WEATHER_FORECAST_PREV);
-				if (get_forecast_idx() < 3) BUTTON_IS_VISIBLE(BUTTON_WEATHER_FORECAST_NEXT);
+				if (get_forecast_idx() < 4) BUTTON_IS_VISIBLE(BUTTON_WEATHER_FORECAST_NEXT);
 				break;
 			case MODE_MUSIC:
 				mpd_music_output();
@@ -794,7 +794,6 @@ int main(void)
 	struct tsdev *ts;
 	char *tsdevice=NULL;
 	int i;
-
 	signal(SIGSEGV, sig);
 	signal(SIGINT,  sig);
 	signal(SIGTERM, sig);
@@ -816,7 +815,7 @@ int main(void)
 		exit(1);	
 	}
 
-	// Touchsreen	
+	// Touchsreen
 	if( (tsdevice = getenv("TSLIB_TSDEVICE")) != NULL ) {
 		ts = ts_open(tsdevice,0);
 	} else {

@@ -1,0 +1,8 @@
+ToDo rpi_gui:
+=============
+  
+* Error: can't open file: /media/fritzbox/WD-MyPassport0810-01/mp3/serious black/as daylight breaks/cd_cover_128x128.jpg
+  ...beim ersten oeffnen???  
+     
+
+     

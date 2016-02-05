@@ -1,0 +1,31 @@
+Tcl-Scripte zum Download der Wettervorhersage
+=============================================
+         (Uwe Berger; 2016)
+
+
+Ich gehen mal davon aus, dass Tcl kein Fremdwort ist...:-)!
+
+Die vorliegenden Scripte sind nur ein Beispiel, wie man es machen 
+koennte! Bei allen Script-Programmen sind die Pfadangaben, Anmelde-
+informationen, Ortsangaben etc. den jeweiligen Gegebenheiten anzupassen!
+
+Ergebnis der Tcl-Programme sind jeweils:
+* eine libconf-Datei zum Einlesen der Wettervorsagewerte durch rpi-gui
+* Generierung eines html-Schnipsels zur Einbindung der Wettervorher-
+  sagewerte auf einer Webseite (weather_forecast_html.tcl)
+
+Die Wettervorhersagewerte koennen ueber verschiedene Quellen bezogen
+werden: 
+* weather_tuxnet24_yahoo.tcl          -> via weather.tuxnet24.de und von
+                                         hier via weather.yahoo.com
+* weather_tuxnet24_openweathermap.tcl -> dito allerdings via
+                                         openweathermap.org
+* weather_openweathermap_json.tcl     -> direkt via openweathermap.org
+* weather_yahoo_json.tcl              -> direkt via weather.yahoo.org
+
+In der Datei conf_fname.tcl werden die Ausgabeziele der beiden Ergebnis-
+dateien (.conf und .html) definiert. 
+
+
+---------
+Have fun!

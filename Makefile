@@ -5,6 +5,7 @@ TARGET = rpi_gui
 CC := gcc
 CFLAGS = -lts -lsqlite3 -lmpd -ljpeg -lconfig -Wall
 ;CFLAGS += -DMPD_DEBUG
+;CFLAGS += -DDEBUG
  
 
 $(TARGET): $(patsubst %.c, %.o, $(SRC))
