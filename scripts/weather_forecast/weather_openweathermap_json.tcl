@@ -17,7 +17,7 @@ package require http
 
 # Request-URL zusammenbauen
 set id          id=2945358
-set appid       appid=03d50d3f4ec97726d7993c4067743c95
+set appid       appid=xyz
 set units       units=metric
 
 set url http://api.openweathermap.org/data/2.5/forecast/daily?$id&$units&$appid

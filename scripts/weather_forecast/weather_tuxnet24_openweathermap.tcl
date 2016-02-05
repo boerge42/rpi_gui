@@ -14,7 +14,7 @@ package require http
 # Request-URL zusammenbauen
 set zip         zip=14772,DE
 set mapid       mapid=2945358
-set apikey      apikey=03d50d3f4ec97726d7993c4067743c95
+set apikey      apikey=xyz
 set unit        unit=c
 set language    language=en
 set mode        mode=txt
